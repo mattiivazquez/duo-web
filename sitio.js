@@ -3,7 +3,7 @@ document.documentElement.classList.add('js');
 const quieto = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // La barra de arriba marca su borde al bajar.
-const barra = document.querySelector('.barra');
+const barra = document.querySelector('.cab');
 const alBajar = () => barra.classList.toggle('bajo', scrollY > 8);
 addEventListener('scroll', alBajar, { passive: true });
 alBajar();
@@ -21,48 +21,6 @@ if (quieto || !('IntersectionObserver' in window)) {
     }
   }, { rootMargin: '0px 0px -8% 0px' });
   porAparecer.forEach((e) => ojo.observe(e));
-}
-
-// Escena de la portada: se escribe el pedido y aparece la respuesta, una sola vez.
-const escena = document.querySelector('[data-escena]');
-const espera = (ms) => new Promise((r) => setTimeout(r, ms));
-async function correrEscena() {
-  const caja = escena.querySelector('[data-escribir]');
-  const pasos = escena.querySelectorAll('[data-paso]');
-  const texto = caja.textContent;
-  // El texto que falta queda invisible pero ocupa su lugar: nada salta al escribir.
-  const hecho = document.createElement('span');
-  hecho.className = 'cursor';
-  const resto = document.createElement('span');
-  resto.className = 'resto';
-  resto.textContent = texto;
-  caja.replaceChildren(hecho, resto);
-  escena.classList.add('animando');
-  await espera(700);
-  for (let i = 1; i <= texto.length; i++) {
-    hecho.textContent = texto.slice(0, i);
-    resto.textContent = texto.slice(i);
-    await espera(24);
-  }
-  hecho.className = '';
-  const penso = pasos[0];
-  const final = penso.textContent;
-  penso.textContent = 'Pensando…';
-  penso.classList.add('visto');
-  await espera(1300);
-  penso.textContent = final;
-  for (const p of [...pasos].slice(1)) {
-    await espera(420);
-    p.classList.add('visto');
-  }
-}
-if (escena && !quieto && 'IntersectionObserver' in window) {
-  const ojoEscena = new IntersectionObserver((v) => {
-    if (!v[0].isIntersecting) return;
-    ojoEscena.disconnect();
-    correrEscena();
-  }, { threshold: 0.35 });
-  ojoEscena.observe(escena);
 }
 
 // Lista de espera. DESTINO es la dirección que guarda los mails (por ejemplo, una tabla
