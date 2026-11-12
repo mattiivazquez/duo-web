@@ -30,7 +30,7 @@ p { text-wrap: pretty; }
 
 /* Marca */
 .marca { display: inline-flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 620; font-size: 25px; letter-spacing: -.03em; text-decoration: none; }
-.marca svg { width: 40px; height: 25px; flex: none; }
+.marca img { width: 40px; height: 40px; object-fit: contain; flex: none; }
 
 /* Cabecera */
 .cab {
@@ -73,7 +73,7 @@ p { text-wrap: pretty; }
   box-shadow: 10px 0 0 var(--papel2);
 }
 .celu-cab { display: flex; align-items: center; gap: 9px; font-weight: 650; padding: 4px 4px 12px; border-bottom: 1px solid var(--raya); }
-.celu-cab svg { width: 29px; height: 19px; flex: none; }
+.celu-cab img { width: 29px; height: 29px; object-fit: contain; flex: none; }
 .burbuja { padding: 11px 14px; border-radius: 16px 16px 16px 4px; background: var(--papel); max-width: 92%; }
 .burbuja.mia { align-self: flex-end; background: var(--tinta); color: var(--papel); border-radius: 16px 16px 4px 16px; }
 .estado { display: flex; align-items: center; gap: 5px; font-size: 12.5px; color: var(--media); padding-left: 4px; }
