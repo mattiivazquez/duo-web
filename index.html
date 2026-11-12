@@ -5,11 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Duo · Tus IAs trabajando juntas, en un solo lugar</title>
 <meta name="description" content="Duo junta tus cuentas de Claude y ChatGPT con memoria compartida, agentes que trabajan en equipo, cerebros de conocimiento y tareas programadas. Desde la compu, el celu o la tablet, sin instalar nada.">
+<meta name="theme-color" content="#1b1a18">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Duo · Tus IAs trabajando juntas">
 <meta property="og:description" content="Claude y ChatGPT con todas tus cuentas, memoria compartida, agentes en equipo y cerebros. Desde cualquier lado.">
+<meta property="og:image" content="https://mattiivazquez.github.io/duo-web/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="icono.svg">
 <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+
+<!-- Íconos (mismo trazo que la app) -->
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-cuentas" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5M16 5.2a3.2 3.2 0 010 5.6M18 14.5c1.7.8 2.7 2.4 3 4.5"/></symbol>
+  <symbol id="i-memoria" viewBox="0 0 24 24"><circle cx="12" cy="5.2" r="2.2"/><circle cx="5.2" cy="18" r="2.2"/><circle cx="18.8" cy="18" r="2.2"/><path d="M10.9 7.1L6.3 16M13.1 7.1l4.6 8.9M7.4 18h9.2"/></symbol>
+  <symbol id="i-personal" viewBox="0 0 24 24"><path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9z"/><path d="M18.5 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></symbol>
+  <symbol id="i-celu" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2.5"/><path d="M11 18h2"/></symbol>
+  <symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-skills" viewBox="0 0 24 24"><path d="M5 4.5h10a3 3 0 013 3V20H8a3 3 0 01-3-3z"/><path d="M5 17a3 3 0 013-3h10M9 8.5h5"/></symbol>
+  <symbol id="i-conector" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M6.5 8h11v3.5a5.5 5.5 0 01-11 0zM12 17v4"/></symbol>
+  <symbol id="i-auto" viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></symbol>
+  <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3.5l7 2.5v5.5c0 4.3-2.9 7.6-7 9-4.1-1.4-7-4.7-7-9V6z"/><path d="M9 12l2.2 2.2L15 10.5"/></symbol>
+  <symbol id="i-carpeta" viewBox="0 0 24 24"><path d="M3.5 7a2 2 0 012-2h4l2 2.5h7a2 2 0 012 2V17a2 2 0 01-2 2h-13a2 2 0 01-2-2z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-cruz" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17"/></symbol>
+</svg>
 
 <header class="barra">
   <a class="marca" href="#"><span class="logo"><i></i><i></i><i></i><i></i><i></i></span>Duo</a>
@@ -26,7 +47,10 @@
 
 <!-- PORTADA -->
 <section class="portada">
-  <p class="etiqueta">Muy pronto · en la nube, sin PC prendida</p>
+  <svg class="constelacion izq" viewBox="0 0 220 110" aria-hidden="true"><path d="M8 28L60 8l46 34 50 26 54 28M106 42L80 84"/><circle cx="8" cy="28" r="2"/><circle cx="60" cy="8" r="3"/><circle cx="106" cy="42" r="2.5"/><circle cx="156" cy="68" r="3.5"/><circle cx="210" cy="96" r="2"/><circle cx="80" cy="84" r="2"/></svg>
+  <svg class="constelacion der" viewBox="0 0 220 110" aria-hidden="true"><path d="M10 82l46-36 58 18 62 30M114 64l38-52 58 22"/><circle cx="10" cy="82" r="2"/><circle cx="56" cy="46" r="3"/><circle cx="114" cy="64" r="2.5"/><circle cx="176" cy="94" r="3.5"/><circle cx="152" cy="12" r="2.5"/><circle cx="210" cy="34" r="2"/></svg>
+
+  <p class="etiqueta pastilla"><span class="latido"></span>Muy pronto · en la nube, sin PC prendida</p>
   <h1>Tus IAs trabajando juntas,<br><span>en un solo lugar.</span></h1>
   <p class="bajada">Duo junta tus cuentas de <b>Claude</b> y <b>ChatGPT</b>, les da una memoria compartida y las pone a trabajar en equipo. Lo usás desde la compu, el celu o la tablet, sin instalar nada.</p>
   <div class="acciones">
@@ -35,28 +59,28 @@
   </div>
 
   <!-- Maqueta de la app -->
-  <div class="ventana" aria-hidden="true">
+  <div class="ventana" data-escena aria-hidden="true">
     <div class="ventana-barra"><i></i><i></i><i></i><span>Duo</span></div>
     <div class="app">
       <aside class="lat">
         <div class="lat-nuevo">+ Nuevo chat</div>
-        <div class="lat-item activo">Inicio</div>
+        <div class="lat-item">Inicio</div>
         <div class="lat-item">Duo</div>
         <div class="lat-item">Cerebros</div>
         <div class="lat-item">Agentes</div>
         <div class="lat-titulo">Cuentas</div>
-        <div class="cuenta"><b class="c-claude">✳ Claude · Trabajo</b><span class="uso"><em style="width:62%"></em></span><small>5 h · 62% · renueva 18:40</small></div>
+        <div class="cuenta enuso"><b class="c-claude">✳ Claude · Trabajo</b><span class="uso"><em style="width:62%"></em></span><small>5 h · 62% · renueva 18:40</small></div>
         <div class="cuenta"><b class="c-claude">✳ Claude · Personal</b><span class="uso"><em style="width:18%"></em></span><small>5 h · 18%</small></div>
         <div class="cuenta"><b class="c-gpt">◎ ChatGPT</b><span class="uso"><em style="width:34%" class="v"></em></span><small>Semana · 34%</small></div>
       </aside>
       <div class="chat">
         <div class="chat-cab"><b>Campaña de verano</b><span class="pill">Marketing</span><span class="pill">Fable 5.2</span><span class="pill c-claude">✳ Claude · Trabajo</span></div>
-        <div class="msj yo">Armame 3 ideas de posteos para la tienda y programalos para el lunes.</div>
+        <div class="msj yo"><span data-escribir>Armame 3 ideas de posteos para la tienda y programalos para el lunes.</span></div>
         <div class="msj ia">
-          <p class="penso">Pensó durante 4 s · Usó 3 herramientas</p>
-          <p>Listo. Te dejo las tres ideas y una tarea programada para el <b>lunes 9:00</b>:</p>
-          <p>1. Antes y después con clientas reales<br>2. Cupón de 48 h para seguidores<br>3. Detrás de escena del armado de pedidos</p>
-          <div class="tarjeta-mini"><b>⏰ Tarea programada</b><span>Lunes 9:00 · Publicar posteos</span></div>
+          <p class="penso" data-paso>Pensó durante 4 s · Usó 3 herramientas</p>
+          <p data-paso>Listo. Te dejo las tres ideas y una tarea programada para el <b>lunes 9:00</b>:</p>
+          <p data-paso>1. Antes y después con clientas reales<br>2. Cupón de 48 h para seguidores<br>3. Detrás de escena del armado de pedidos</p>
+          <div class="tarjeta-mini" data-paso><b><svg class="ic"><use href="#i-reloj"/></svg>Tarea programada</b><span>Lunes 9:00 · Publicar posteos</span></div>
         </div>
         <div class="caja">Pedile a Claude que haga algo…<span class="enviar">↑</span></div>
       </div>
@@ -69,44 +93,115 @@
   <p>Funciona con tu suscripción de <b>Claude</b> y tu cuenta de <b>ChatGPT</b>. Duo no te cobra por las IAs: usás lo que ya pagás.</p>
 </section>
 
+<!-- ANTES / CON DUO -->
+<section class="bloque" data-aparece>
+  <h2>La IA ya la usás. Duo la ordena.</h2>
+  <div class="versus">
+    <div class="col antes">
+      <h3>Sin Duo</h3>
+      <ul>
+        <li><svg class="ic"><use href="#i-cruz"/></svg>Una pestaña por cada IA y por cada cuenta</li>
+        <li><svg class="ic"><use href="#i-cruz"/></svg>Explicarle todo de nuevo a cada una</li>
+        <li><svg class="ic"><use href="#i-cruz"/></svg>Se acaba el cupo y el trabajo queda por la mitad</li>
+        <li><svg class="ic"><use href="#i-cruz"/></svg>Copiar y pegar entre chats para que una revise a la otra</li>
+      </ul>
+    </div>
+    <div class="col con">
+      <h3><span class="logo"><i></i><i></i><i></i><i></i><i></i></span>Con Duo</h3>
+      <ul>
+        <li><svg class="ic"><use href="#i-check"/></svg>Todas tus cuentas en una sola pantalla</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Una memoria que comparten todas</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Seguís el mismo chat con otra cuenta</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Un equipo de agentes que se revisa solo</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- FUNCIONES -->
 <section id="funciones" class="bloque">
-  <h2>Todo lo que hace Duo</h2>
-  <p class="sub">Pensado para la gente que usa la IA todos los días y quiere sacarle el jugo de verdad.</p>
-  <div class="grilla">
-    <article><span class="ico">👥</span><h3>Todas tus cuentas juntas</h3><p>Sumá varias cuentas de Claude y ChatGPT. Ves cuánto usaste de cada una y cuándo renueva. Si a una se le acaba el cupo, seguís el mismo chat con otra.</p></article>
-    <article><span class="ico">🧠</span><h3>Memoria compartida</h3><p>Lo que aprende una IA lo sabe la otra: tus proyectos, tus preferencias y lo que ya resolviste. No tenés que explicar todo de nuevo.</p></article>
-    <article><span class="ico">🤝</span><h3>Agentes que trabajan en equipo</h3><p>Guardá roles (investigador, redactor, revisor) y armá equipos. Un agente coordina, reparte el trabajo y te entrega el resultado revisado.</p></article>
-    <article><span class="ico">📚</span><h3>Cerebros</h3><p>Subí PDFs, páginas web, textos o videos de YouTube (hasta canales enteros). Preguntale lo que quieras y te responde citando la fuente exacta.</p></article>
-    <article><span class="ico">✨</span><h3>Duo, tu asistente personal</h3><p>Te dice qué quedó pendiente y qué necesita tu atención. Te propone agentes, tareas, ordena tus chats en carpetas y les pone nombres claros. Vos aprobás.</p></article>
-    <article><span class="ico">⏰</span><h3>Tareas programadas</h3><p>"Todos los lunes a las 9, resumime las novedades." Duo lo manda solo y te avisa cuando está.</p></article>
-    <article><span class="ico">🧩</span><h3>Skills</h3><p>Enseñale a tus IAs a hacer algo a tu manera: importá una skill desde un archivo o un enlace, o escribila vos. Funciona igual en Claude y en ChatGPT.</p></article>
-    <article><span class="ico">🔌</span><h3>Conectores</h3><p>Conectá tus herramientas (correo, calendario, documentos y más) para que las IAs trabajen con tus datos de verdad.</p></article>
-    <article><span class="ico">🎛️</span><h3>Modo automático</h3><p>Duo elige el modelo y cuánto pensar según lo que pedís: rápido y barato para lo simple, el mejor modelo para lo difícil.</p></article>
-    <article><span class="ico">🛡️</span><h3>Vos decidís qué pueden tocar</h3><p>Modo lectura, edición o libre. Si una IA quiere hacer algo delicado, te pregunta antes, también en el celu.</p></article>
-    <article><span class="ico">🗂️</span><h3>Todo ordenado</h3><p>Entornos de trabajo por cliente o proyecto, pestañas, buscador en todos tus chats y papelera de 30 días.</p></article>
-    <article><span class="ico">📱</span><h3>Desde donde quieras</h3><p>Compu, Mac, celu o iPad, con avisos cuando una IA termina o te pide permiso. Empezás en un lado y seguís en otro.</p></article>
+  <h2 data-aparece>Todo lo que hace Duo</h2>
+  <p class="sub" data-aparece>Pensado para quien usa la IA todos los días y quiere sacarle el jugo de verdad.</p>
+
+  <div class="bento">
+    <article class="grande" data-aparece>
+      <div class="cab"><span class="ico"><svg class="ic"><use href="#i-cuentas"/></svg></span><h3>Todas tus cuentas juntas</h3></div>
+      <p>Sumá varias cuentas de Claude y ChatGPT. Ves cuánto usaste de cada una y cuándo renueva. Si a una se le acaba el cupo, seguís el mismo chat con otra.</p>
+      <div class="visual v-cuentas" aria-hidden="true">
+        <div class="cuenta enuso"><b class="c-claude">✳ Claude · Trabajo</b><span class="uso"><em style="width:96%"></em></span><small>5 h · 96% · renueva 18:40</small></div>
+        <div class="flecha">sigue con ↓</div>
+        <div class="cuenta"><b class="c-claude">✳ Claude · Personal</b><span class="uso"><em style="width:18%" class="v"></em></span><small>5 h · 18%</small></div>
+      </div>
+    </article>
+
+    <article class="grande" data-aparece>
+      <div class="cab"><span class="ico"><svg class="ic"><use href="#i-memoria"/></svg></span><h3>Memoria compartida</h3></div>
+      <p>Lo que aprende una IA lo sabe la otra: tus proyectos, tus preferencias y lo que ya resolviste. No tenés que explicar todo de nuevo.</p>
+      <div class="visual v-memoria" aria-hidden="true">
+        <div class="ias"><span class="pill c-claude">✳ Claude</span><span class="pill c-gpt">◎ ChatGPT</span></div>
+        <div class="puente"><i></i><i></i></div>
+        <div class="notas">
+          <b>Memoria de Duo</b>
+          <span>Proyecto: tienda de ropa, lanza en diciembre</span>
+          <span>Prefiere respuestas cortas y directas</span>
+          <span>El logo nuevo ya está aprobado</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="grande" data-aparece>
+      <div class="cab"><span class="ico"><svg class="ic"><use href="#i-personal"/></svg></span><h3>Duo, tu asistente personal</h3></div>
+      <p>Te dice qué quedó pendiente y qué necesita tu atención. Te propone agentes y tareas, ordena tus chats en carpetas y les pone nombres claros. Nada se hace sin que lo apruebes.</p>
+      <div class="visual v-propuesta" aria-hidden="true">
+        <b>Cambios propuestos</b>
+        <span>Crear el entorno <em>Clientes</em></span>
+        <span>Mover 4 chats a <em>Clientes</em></span>
+        <span>Renombrar "Hola" → <em>Presupuesto García</em></span>
+        <div class="aplicar">Aplicar</div>
+      </div>
+    </article>
+
+    <article class="grande" data-aparece>
+      <div class="cab"><span class="ico"><svg class="ic"><use href="#i-celu"/></svg></span><h3>Desde donde quieras</h3></div>
+      <p>Compu, Mac, celu o iPad. Te avisa cuando una IA termina o te pide permiso, y contestás desde donde estés. Empezás en un lado y seguís en otro.</p>
+      <div class="visual v-celu" aria-hidden="true">
+        <div class="telefono">
+          <div class="muesca"></div>
+          <div class="t-cab"><span class="logo"><i></i><i></i><i></i><i></i><i></i></span>Campaña de verano</div>
+          <div class="t-msj">Subí los cambios a la web.</div>
+          <div class="t-permiso"><b>Claude pide permiso</b><span>Publicar 2 archivos en la web</span><div><i class="si">Permitir</i><i>Rechazar</i></div></div>
+        </div>
+      </div>
+    </article>
+
+    <article data-aparece><span class="ico"><svg class="ic"><use href="#i-reloj"/></svg></span><h3>Tareas programadas</h3><p>"Todos los lunes a las 9, resumime las novedades." Duo lo manda solo y te avisa cuando está.</p></article>
+    <article data-aparece><span class="ico"><svg class="ic"><use href="#i-skills"/></svg></span><h3>Skills</h3><p>Enseñale a tus IAs a hacer algo a tu manera: importá una skill desde un archivo o un enlace, o escribila vos.</p></article>
+    <article data-aparece><span class="ico"><svg class="ic"><use href="#i-conector"/></svg></span><h3>Conectores</h3><p>Conectá tu correo, calendario, documentos y más, para que las IAs trabajen con tus datos de verdad.</p></article>
+    <article data-aparece><span class="ico"><svg class="ic"><use href="#i-auto"/></svg></span><h3>Modo automático</h3><p>Duo elige el modelo y cuánto pensar según lo que pedís: rápido para lo simple, el mejor para lo difícil.</p></article>
+    <article data-aparece><span class="ico"><svg class="ic"><use href="#i-escudo"/></svg></span><h3>Vos decidís qué pueden tocar</h3><p>Modo lectura, edición o libre. Si una IA quiere hacer algo delicado, te pregunta antes.</p></article>
+    <article data-aparece><span class="ico"><svg class="ic"><use href="#i-carpeta"/></svg></span><h3>Todo ordenado</h3><p>Entornos por cliente o proyecto, pestañas, buscador en todos tus chats y papelera de 30 días.</p></article>
   </div>
 </section>
 
 <!-- AGENTES -->
 <section id="agentes" class="bloque doble">
-  <div class="texto">
+  <div class="texto" data-aparece>
     <p class="etiqueta">Agentes y equipos</p>
     <h2>Un equipo de IAs que se reparte el trabajo</h2>
     <p>Pedile algo grande a tu equipo. El coordinador decide quién hace qué, cada agente usa la cuenta y el modelo que le asignaste, y si algo no está bien, se lo devuelve para corregir.</p>
     <ul class="lista">
-      <li>En cadena, en debate o coordinado por un agente jefe</li>
-      <li>Cada agente recuerda lo que aprendió y las correcciones que le hiciste</li>
-      <li>Ves el tablero en vivo: quién está trabajando, qué entregó y cuánto gastó</li>
+      <li><svg class="ic"><use href="#i-check"/></svg>En cadena, en debate o coordinado por un agente jefe</li>
+      <li><svg class="ic"><use href="#i-check"/></svg>Cada agente recuerda lo que aprendió y las correcciones que le hiciste</li>
+      <li><svg class="ic"><use href="#i-check"/></svg>Ves el tablero en vivo: quién trabaja, qué entregó y cuánto gastó</li>
     </ul>
   </div>
-  <div class="maqueta" aria-hidden="true">
+  <div class="maqueta" data-aparece aria-hidden="true">
+    <div class="pedido">Investiguen el mercado y preparen un informe revisado.</div>
     <div class="tablero">
       <div class="tab-cab"><b>Equipo Informes</b><span class="ok">Terminado · 3 de 3</span></div>
-      <div class="fila"><span class="punto"></span><div><b>🔍 Investigador</b><small>ChatGPT</small></div><p>Juntar datos con fuentes</p><span class="hecha">Hecha</span></div>
-      <div class="fila"><span class="punto"></span><div><b>✍️ Redactor</b><small>Claude · Sonnet</small></div><p>Escribir el informe</p><span class="hecha">Hecha</span></div>
-      <div class="fila"><span class="punto"></span><div><b>🛡️ Revisor</b><small>Claude · Fable</small></div><p>Revisar el borrador</p><span class="hecha">Hecha</span></div>
+      <div class="fila"><span class="punto"></span><div><b>Investigador</b><small class="c-gpt">◎ ChatGPT</small></div><p>Juntar datos con fuentes</p><span class="hecha">Hecha</span></div>
+      <div class="fila"><span class="punto"></span><div><b>Redactor</b><small class="c-claude">✳ Claude · Sonnet</small></div><p>Escribir el informe</p><span class="hecha">Hecha</span></div>
+      <div class="fila"><span class="punto"></span><div><b>Revisor</b><small class="c-claude">✳ Claude · Fable</small></div><p>Revisar el borrador</p><span class="hecha">Corregida ↩ 1</span></div>
       <div class="tab-pie">Dirección coordinó: 4 pasos · 4 encargos</div>
     </div>
   </div>
@@ -114,57 +209,59 @@
 
 <!-- CEREBROS -->
 <section id="cerebros" class="bloque doble invertido">
-  <div class="texto">
+  <div class="texto" data-aparece>
     <p class="etiqueta">Cerebros</p>
     <h2>Tu biblioteca, convertida en un experto</h2>
     <p>Cargá tus apuntes, normas, manuales o un canal de YouTube entero. Preguntá en lenguaje normal y cada respuesta trae la cita para que la compruebes.</p>
     <ul class="lista">
-      <li>Manual, informe, tarjetas para repasar, cuestionario y mapa mental en un clic</li>
-      <li>Resumen en audio para escuchar mientras manejás</li>
-      <li>Tus chats y tus agentes también lo consultan</li>
+      <li><svg class="ic"><use href="#i-check"/></svg>PDF, páginas web, textos y videos, hasta 500 por canal</li>
+      <li><svg class="ic"><use href="#i-check"/></svg>Resumen en audio para escuchar mientras manejás</li>
+      <li><svg class="ic"><use href="#i-check"/></svg>Tus chats y tus agentes también lo consultan</li>
     </ul>
   </div>
-  <div class="maqueta" aria-hidden="true">
+  <div class="maqueta" data-aparece aria-hidden="true">
     <div class="cerebro">
       <div class="cer-fuentes">
         <b>Fuentes</b>
-        <span>☑ NIIF 15 · Apunte</span>
-        <span>☑ Manual interno.pdf</span>
-        <span>☑ Curso en YouTube · 42 videos</span>
-        <span>☐ Borrador viejo</span>
+        <span><i class="caja-ok"></i>NIIF 15 · Apunte</span>
+        <span><i class="caja-ok"></i>Manual interno.pdf</span>
+        <span><i class="caja-ok"></i>Curso en YouTube · 42 videos</span>
+        <span class="apagada"><i class="caja-no"></i>Borrador viejo</span>
       </div>
       <div class="cer-chat">
         <div class="msj yo">¿Cuándo se reconoce el ingreso en una venta con instalación?</div>
-        <div class="msj ia"><p>Cuando se cumple la obligación de desempeño: si la instalación es distinta, se reconoce aparte <span class="cita">[1]</span>. En el curso lo explican con un ejemplo <span class="cita">[2 · 12:40]</span>.</p></div>
+        <div class="msj ia"><p>Cuando se cumple la obligación de desempeño: si la instalación es distinta, se reconoce aparte <span class="cita">1</span>. En el curso lo explican con un ejemplo <span class="cita">2 · 12:40</span>.</p></div>
       </div>
     </div>
+    <div class="studio"><span>Manual</span><span>Informe</span><span>Tarjetas</span><span>Cuestionario</span><span>Mapa mental</span><span>Audio</span></div>
   </div>
 </section>
 
 <!-- CÓMO FUNCIONA -->
 <section class="bloque">
-  <h2>Empezás en tres pasos</h2>
+  <h2 data-aparece>Empezás en tres pasos</h2>
   <div class="pasos">
-    <div><span>1</span><h3>Creás tu cuenta</h3><p>Con tu mail o con Google.</p></div>
-    <div><span>2</span><h3>Conectás tus IAs</h3><p>Entrás a Claude y a ChatGPT con tus propias cuentas. Duo nunca ve tus contraseñas.</p></div>
-    <div><span>3</span><h3>Listo</h3><p>Duo te prepara tu espacio en la nube, separado del de los demás. No hace falta dejar ninguna compu prendida.</p></div>
+    <div data-aparece><span>1</span><h3>Creás tu cuenta</h3><p>Con tu mail o con Google, desde cualquier dispositivo.</p></div>
+    <div data-aparece><span>2</span><h3>Conectás tus IAs</h3><p>Entrás a Claude y a ChatGPT con tus propias cuentas. Duo nunca ve tus contraseñas.</p></div>
+    <div data-aparece><span>3</span><h3>Listo</h3><p>Duo te prepara tu espacio en la nube, separado del de los demás. No hace falta dejar ninguna compu prendida.</p></div>
   </div>
 </section>
 
 <!-- PREGUNTAS -->
 <section id="preguntas" class="bloque angosto">
-  <h2>Preguntas frecuentes</h2>
+  <h2 data-aparece>Preguntas frecuentes</h2>
   <details><summary>¿Tengo que pagar Claude o ChatGPT aparte?</summary><p>Sí. Duo usa tus propias cuentas, así que pagás tu suscripción directamente a cada empresa. Duo cobra solo por lo suyo y no se queda con nada del uso de las IAs.</p></details>
   <details><summary>¿Necesito una compu prendida?</summary><p>No. Cada usuario tiene su propio espacio en la nube, que se enciende cuando lo usás. Entrás desde el navegador de cualquier dispositivo.</p></details>
   <details><summary>¿Quién puede ver mis chats y archivos?</summary><p>Solo vos. Cada espacio está separado del de los demás, y Duo nunca guarda tus contraseñas de Claude ni de ChatGPT.</p></details>
   <details><summary>¿Puedo usar varias cuentas a la vez?</summary><p>Sí. Podés sumar varias cuentas, ver el uso de cada una y pasar un chat de una a otra cuando se acaba el cupo.</p></details>
-  <details><summary>¿Cuánto cuesta?</summary><p>Lo anunciamos con el lanzamiento. Los que se anoten en la lista de espera van a tener un precio especial.</p></details>
+  <details><summary>¿Cuándo sale y cuánto cuesta?</summary><p>Estamos terminando la versión en la nube. El precio lo anunciamos con el lanzamiento, y quienes estén en la lista de espera se enteran primero.</p></details>
 </section>
 
 <!-- LISTA DE ESPERA -->
-<section id="lista" class="cierre">
+<section id="lista" class="cierre" data-aparece>
+  <span class="logo grande"><i></i><i></i><i></i><i></i><i></i></span>
   <h2>Sé de los primeros en usar Duo</h2>
-  <p>Dejanos tu mail y te avisamos cuando abramos.</p>
+  <p id="textoLista">Dejanos tu mail y te avisamos cuando abramos.</p>
   <form id="formLista" class="form-lista">
     <input type="email" name="email" placeholder="tu@mail.com" required aria-label="Tu mail">
     <button class="boton" type="submit">Anotarme</button>
@@ -175,7 +272,15 @@
 </main>
 
 <footer class="pie">
-  <span class="marca"><span class="logo"><i></i><i></i><i></i><i></i><i></i></span>Duo</span>
+  <div class="pie-arriba">
+    <span class="marca"><span class="logo"><i></i><i></i><i></i><i></i><i></i></span>Duo</span>
+    <nav>
+      <a href="#funciones">Funciones</a>
+      <a href="#agentes">Agentes</a>
+      <a href="#cerebros">Cerebros</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+  </div>
   <p>Claude es una marca de Anthropic. ChatGPT es una marca de OpenAI. Duo es un producto independiente y no está afiliado, respaldado ni patrocinado por ninguna de las dos empresas.</p>
 </footer>
 
